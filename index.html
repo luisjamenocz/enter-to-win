@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mother's Day Giveaway | Gloriosos Italian Market</title>
+  <title>Father's Day Giveaway | Glorioso's Italian Market</title>
   <style>
     * { box-sizing: border-box; }
     body {
@@ -54,7 +54,7 @@
       margin-bottom: 18px;
     }
     .headline {
-      font-size: clamp(40px, 7vw, 76px);
+      font-size: clamp(38px, 6vw, 70px);
       line-height: 0.95;
       margin: 0;
       font-weight: 900;
@@ -65,8 +65,20 @@
       font-size: 18px;
       line-height: 1.6;
       color: #525252;
-      margin: 22px 0 28px;
+      margin: 22px 0 24px;
       max-width: 560px;
+    }
+    .contest-dates {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: #1f1f1f;
+      color: #fff;
+      padding: 12px 18px;
+      border-radius: 16px;
+      font-weight: 800;
+      font-size: 15px;
+      margin-bottom: 18px;
     }
     .prize-box {
       display: inline-flex;
@@ -80,25 +92,36 @@
       font-size: 18px;
       box-shadow: 0 10px 24px rgba(198,40,40,0.24);
     }
-    .features {
+    .prizes {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 14px;
-      margin-top: 26px;
+      grid-template-columns: 1fr;
+      gap: 12px;
+      margin-top: 24px;
     }
-    .feature {
+    .prize {
       padding: 16px;
       border-radius: 18px;
       background: #faf7f2;
       border: 1px solid rgba(0,0,0,0.05);
-      font-size: 14px;
+      font-size: 15px;
       line-height: 1.5;
       color: #474747;
     }
-    .feature strong {
+    .prize strong {
       display: block;
       color: #1f1f1f;
       margin-bottom: 4px;
+      font-size: 16px;
+    }
+    .disclaimer {
+      margin-top: 22px;
+      padding: 16px;
+      border-radius: 16px;
+      background: #f4f4f4;
+      border: 1px solid rgba(0,0,0,0.06);
+      color: #666;
+      font-size: 12px;
+      line-height: 1.6;
     }
     .form-card, .thank-you-card {
       padding: 28px;
@@ -114,22 +137,46 @@
       line-height: 1.6;
       font-size: 15px;
     }
-    .field {
-      margin-bottom: 12px;
-    }
-    .input {
+    .field { margin-bottom: 12px; }
+    .input, .select {
       width: 100%;
       padding: 14px 16px;
       border-radius: 14px;
       border: 1px solid #d7d7d7;
       font-size: 15px;
       transition: 0.2s ease;
+      background: #fff;
     }
-    .input:focus {
+    .input:focus, .select:focus {
       outline: none;
       border-color: #2f8f46;
       box-shadow: 0 0 0 4px rgba(47,143,70,0.12);
     }
+    .question-label {
+      display: block;
+      font-size: 14px;
+      font-weight: 700;
+      margin: 4px 0 8px;
+      color: #333;
+    }
+    .radio-group {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+    .radio-option {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 13px 14px;
+      border-radius: 14px;
+      border: 1px solid #d7d7d7;
+      background: #fff;
+      font-size: 15px;
+      cursor: pointer;
+    }
+    .radio-option input { transform: scale(1.1); }
     .consent {
       display: flex;
       gap: 10px;
@@ -189,18 +236,10 @@
       font-size: 16px;
     }
     @media (max-width: 900px) {
-      .wrap {
-        grid-template-columns: 1fr;
-      }
-      .promo, .form-card, .thank-you-card {
-        border-radius: 22px;
-      }
-      .promo {
-        padding: 28px;
-      }
-      .features {
-        grid-template-columns: 1fr;
-      }
+      .wrap { grid-template-columns: 1fr; }
+      .promo, .form-card, .thank-you-card { border-radius: 22px; }
+      .promo { padding: 28px; }
+      .radio-group { flex-direction: column; }
     }
   </style>
 </head>
@@ -209,22 +248,46 @@
     <div class="wrap">
       <div class="promo">
         <div style="display:flex;align-items:center;gap:10px;margin-bottom:18px;">
-          <img src="logo.png" alt="Gloriosos Logo" style="height:60px;">
-          <div class="brand">Gloriosos Italian Market</div>
+          <img src="logo.png" alt="Glorioso's Logo" style="height:60px;">
+          <div class="brand">Glorioso's Italian Market</div>
         </div>
+
         <h1 class="headline">
-          <span class="red">WIN $100</span>
-          <span class="green">FOR MOTHER'S DAY</span>
+          <span class="red">FATHER'S DAY</span>
+          <span class="green">GIVEAWAY</span>
         </h1>
+
         <p class="subhead">
-          Celebrate Mom with a special Mother's Day giveaway from Gloriosos Italian Market. Enter now for a chance to win a <strong>$100 gift card</strong> and make her day even more special.
+          Celebrate Father's Day with Glorioso's Italian Market. Enter now for a chance to win grilling prizes and Glorioso's gift cards.
         </p>
-        <div class="prize-box">🎁 $100 Gift Card Giveaway</div>
+
+        <div class="contest-dates">📅 Contest runs June 8-June 21, 2026</div><br>
+        <div class="prize-box">🎁 Enter to Win Father's Day Prizes</div>
+
+        <div class="prizes">
+          <div class="prize">
+            <strong>1st Prize</strong>
+            Winner will receive a 22" Weber Charcoal Grill.
+          </div>
+          <div class="prize">
+            <strong>2nd Prize</strong>
+            Winner will receive a BBQ Tool Set.
+          </div>
+          <div class="prize">
+            <strong>3rd &amp; 4th Prize</strong>
+            Winners will receive a $40 Glorioso's Gift Card.
+          </div>
+        </div>
+
+        <div class="disclaimer">
+          <strong>Disclaimer:</strong> No purchase is necessary. Must be 18 years or older to win. Only one entry per person per household per day. Only one winner per household is permitted. Employees and immediate family members are not eligible to enter. Prizes have no cash value, are non-transferrable, and cannot be exchanged or returned.
+        </div>
+      </div>
 
       <div>
         <div class="form-card" id="formCard">
           <h2 class="form-title">Enter to Win</h2>
-          <p class="form-subtitle">Enter your information below for a chance to win a $100 Mother's Day gift card from Gloriosos Italian Market.</p>
+          <p class="form-subtitle">Enter your information below for a chance to win one of our Father's Day giveaway prizes from Glorioso's Italian Market.</p>
 
           <form id="giveawayForm" action="https://formspree.io/f/mzdkvqka" method="POST">
             <div class="field">
@@ -239,26 +302,44 @@
             <div class="field">
               <input class="input" type="tel" name="Phone" placeholder="Phone Number" required>
             </div>
+            <div class="field">
+              <input class="input" type="text" name="Zip Code" placeholder="Zip Code" required>
+            </div>
+
+            <div class="field">
+              <span class="question-label">Are you a Glorioso's Rewards Member? *</span>
+              <div class="radio-group">
+                <label class="radio-option">
+                  <input type="radio" name="Rewards Member" value="Yes" required>
+                  Yes
+                </label>
+                <label class="radio-option">
+                  <input type="radio" name="Rewards Member" value="No" required>
+                  No
+                </label>
+              </div>
+            </div>
 
             <input type="hidden" name="Source" value="Website Giveaway">
-            <input type="hidden" name="Campaign" value="Mother's Day Giveaway">
-            <input type="hidden" name="_subject" value="New Mother's Day Giveaway Entry - Gloriosos Italian Market">
+            <input type="hidden" name="Campaign" value="Father's Day Giveaway">
+            <input type="hidden" name="Contest Dates" value="June 8-June 21, 2026">
+            <input type="hidden" name="_subject" value="New Father's Day Giveaway Entry - Glorioso's Italian Market">
 
             <label class="consent">
               <input type="checkbox" name="Consent" required>
-              <span>I agree to receive promotions and updates from Gloriosos Italian Market.</span>
+              <span>I agree to receive promotions and updates from Glorioso's Italian Market.</span>
             </label>
 
-            <button class="btn" type="submit">ENTER TO WIN $100</button>
+            <button class="btn" type="submit">ENTER TO WIN</button>
           </form>
 
-          <div class="small-note">Winner will be selected after the giveaway period ends. Good luck!</div>
+          <div class="small-note">Contest runs June 8-June 21, 2026. Winner will be selected after the giveaway period ends. Good luck!</div>
         </div>
 
         <div class="thank-you-card" id="thankYouCard">
           <div class="thank-you-icon">🎉</div>
           <h2>Thank You!</h2>
-          <p>Your entry was submitted successfully. Good luck in our Mother's Day giveaway from Gloriosos Italian Market.</p>
+          <p>Your entry was submitted successfully. Good luck in our Father's Day giveaway from Glorioso's Italian Market.</p>
         </div>
       </div>
     </div>
@@ -272,11 +353,17 @@ const thankYouCard = document.getElementById('thankYouCard');
 form.addEventListener('submit', async function(e) {
   e.preventDefault();
 
+  const rewardsMember = document.querySelector('[name="Rewards Member"]:checked');
+
   const data = {
     firstName: document.querySelector('[name="First Name"]').value,
     lastName: document.querySelector('[name="Last Name"]').value,
     email: document.querySelector('[name="Email"]').value,
     phone: document.querySelector('[name="Phone"]').value,
+    zipCode: document.querySelector('[name="Zip Code"]').value,
+    rewardsMember: rewardsMember ? rewardsMember.value : "",
+    campaign: "Father's Day Giveaway",
+    contestDates: "June 8-June 21, 2026",
     consent: document.querySelector('[name="Consent"]').checked ? "Yes" : "No"
   };
 
@@ -298,6 +385,6 @@ form.addEventListener('submit', async function(e) {
   thankYouCard.style.display = 'block';
   form.reset();
 });
-</script>
+  </script>
 </body>
 </html>
